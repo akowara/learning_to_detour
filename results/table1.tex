@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Goal-reaching in an unseen photorealistic city (Isaac Sim). Each cell pools 5 maximum speeds (4, 6, 8, 10, 12\,m/s) $\times$ 10 episodes. Success: within 5\,m of the goal without collision. Time to goal and path ratio (flown length / shortest collision-free path to the goal radius) over successful episodes.}
+\label{tab:city}
+\begin{tabular}{llccccc}
+\toprule
+Route & Policy & Success & Collision & Timeout & Time to goal (s) & Path ratio \\
+\midrule
+Open street (112\,m / 112\,m) & Original policy & 100\% & 0\% & 0\% & 18.0 $\pm$ 6.3 & 0.99 $\pm$ 0.01 \\
+ & Fine-tuned, no SHAC & 100\% & 0\% & 0\% & 15.9 $\pm$ 3.8 & 0.99 $\pm$ 0.01 \\
+ & Fine-tuned, SHAC (ours) & \textbf{100\%} & 0\% & 0\% & 15.0 $\pm$ 3.2 & 1.00 $\pm$ 0.01 \\
+\midrule
+Turn (103\,m / 116\,m) & Original policy & 0\% & 68\% & 32\% & -- & -- \\
+ & Fine-tuned, no SHAC & 62\% & 4\% & 34\% & 48.4 $\pm$ 11.8 & 1.36 $\pm$ 0.22 \\
+ & Fine-tuned, SHAC (ours) & \textbf{96\%} & 0\% & 4\% & 45.5 $\pm$ 7.8 & 1.29 $\pm$ 0.10 \\
+\midrule
+Detour (165\,m / 310\,m) & Original policy & 0\% & 42\% & 58\% & -- & -- \\
+ & Fine-tuned, no SHAC & 0\% & 40\% & 60\% & -- & -- \\
+ & Fine-tuned, SHAC (ours) & \textbf{100\%} & 0\% & 0\% & 87.2 $\pm$ 4.7 & 1.26 $\pm$ 0.01 \\
+\bottomrule
+\end{tabular}
+\end{table}
