@@ -105,6 +105,8 @@ The training simulator (`env_cuda.py`, `src/`) and the policy network (`model.py
   title={Learning vision-based agile flight via differentiable physics},
   author={Zhang, Yuang and Hu, Yu and Song, Yunlong and Zou, Danping and Lin, Weiyao},
   journal={Nature Machine Intelligence},
-  year={2025}
+  pages={1--13},
+  year={2025},
+  publisher={Nature Publishing Group}
 }
 ```
